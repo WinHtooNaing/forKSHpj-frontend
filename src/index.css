@@ -11,3 +11,107 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.logo-image{
+  height: 80px;
+}
+.fontend-image{
+  height: 150px;
+}
+.backend-image{
+  height:150px;
+  width:100%;
+}
+.fullstack-image{
+  height:150px
+}
+.seeallblog{
+  color:white
+}
+.figure-image{
+  width:250px;height:250px
+}
+.active{
+  color: #ffc221;
+}
+.nav-title{
+  margin-top: 30px;
+}
+.nav-title a{
+  font-size: 20px;
+  margin-left: 30px;
+}
+.frontend-container{
+  width:80%;
+  margin-left:10%;
+  margin-top:100px;
+  }
+   .h1{
+    font-size:50px;
+    font-weight:700;
+    color:#222;
+  }
+  .p{
+    font-size:20px;
+  }
+  .h2{
+  font-size:30px;
+  color:#222;
+  }
+  .backend-container{
+    width:70%;
+    margin-left:15%;
+    margin-top:100px;
+    }
+     .img{
+     width:100%
+    }
+    .backend{
+    margin-top:50px}
+    ul li{
+    list-style-type: circle; 
+    }
+    .fontsize-control{
+      font-weight:500
+    }
+
+    .page-container{
+      width:80%;
+      margin-left:10%;
+      margin-top: 50px;
+      }
+      .image{
+      width:80%;
+      margin-left:10%;
+      height:450px;
+      margin-bottom: 50px;
+      }
+      .title{
+      font-size:30px;
+      font-weight:700
+      }
+      .time{
+      text-align:center;
+      margin-top:-30px;
+      margin-bottom: 50px;
+      }
+      .description{
+      line-height:30px;
+      }
+       @media (max-width: 1000px) {
+         .image{
+         height:auto;}
+       }
+       .about-container{
+        width: 80%;
+        margin-left: 10%;
+
+       }
+       .about-container p{
+        margin-bottom: 20px;
+        font-size: 20px;
+       }
+       .about-title{
+        font-size: 30px;
+        font-family: sans-serif;
+        font-weight: 600;
+       }
