@@ -12,6 +12,9 @@ import Dashboard from './admin/Dashboard';
 import Post from './admin/Post';
 import CreatePost from './admin/CreatePost';
 import Login from './admin/Login';
+import axios from 'axios';
+import EditPost from './admin/EditPost';
+axios.defaults.baseURL = "http://localhost:8000/";
 function App() {
   const router = createBrowserRouter([
     {
@@ -65,6 +68,10 @@ function App() {
         {
           path: "/admin/create",
           element: <CreatePost />,
+        },
+        {
+          path: "/admin/edit-post/:id",
+          element: <EditPost />,
         },
         
       ]

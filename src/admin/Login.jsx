@@ -1,19 +1,36 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import swal from 'sweetalert';
 const Login = () => {
     const navigate = useNavigate();
-    const adminEmail = "admin@gmail.com";
-    const adminPassword = "admin12345"
+    
+
+
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+  
+        axios.get(`/api/users`).then(res=>{
+            if(res.status === 200)
+            {
+                setPosts(res.data.posts)
+  
+            }
+        });
+  
+    }, []);
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
         const email = formData.get('email');
         const password = formData.get('password');
-        if(email === adminEmail && password === adminPassword){
+        if(email === posts.email && password === posts.name){
             navigate("/admin/");
-            alert("Successfully login!")
+            swal("Success",  "Successfully Login");
         }else{
-            alert("Wrong something!")
+          swal("Error",  "something went wrong");
         }
       };
   return (
